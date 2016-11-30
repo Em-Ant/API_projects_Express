@@ -1,4 +1,4 @@
-# FCC MIcroservice API Projects - Express/mongoDB
+# FCC Microservice API Projects - Express/mongoDB
 
 See it live at https://micro-api.hyperdev.space/.
 
