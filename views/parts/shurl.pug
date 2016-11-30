@@ -1,0 +1,23 @@
+.container
+  img(src="M3_logo.png" alt="Timestamp Logo")
+.container
+  h2 API Project: URL Shortener - Express
+  h3 User Stories:
+  ol
+    li I can POST a URL and I will receive a shortened URL in the JSON response
+    li If I pass an invalid URL that doesn't follow the valid http://www.example.com format,
+      |the JSON response will contain an error instead.
+    li When I visit that shortened URL, it will redirect me to my original link..
+
+  h3 Creation
+  - action = apilink + '/new'
+  form(action=action, method="POST")
+    label(for="input_1") URL to shorten:
+    input#input_1(type="text", name="url", value="https://www.google.com")
+    input(type="submit" value="Submit URL")
+
+  h3 Example Output:
+  p: code { "original_url": "https://www.google.com", "short_url": "1" }
+
+  h3 Redirect:
+  p <a href="#{apilink}/1">#{home}/#{apilink}/1</a> redirects to <a href="https://www.google.com">https://www.google.com</a>

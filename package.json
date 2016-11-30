@@ -1,0 +1,34 @@
+{
+  "name": "demo-micro-api",
+  "version": "0.0.1",
+  "description": "A microservice API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "2.0.0-beta6",
+    "body-parser": "^1.15.2",
+    "multer": "^1.2.0",
+    "mongodb": "^2.2.12",
+    "mongoose": "^4.7.0",
+    "request": "^2.79.0"
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Em-Ant/API_projects_Express.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "API"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
+}

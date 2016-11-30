@@ -1,0 +1,47 @@
+
+- apilink = "api/" + selector
+
+if selector == "timestamp"
+  - title = "Timestamp Microservice"
+else if selector == "whoami"
+  - title = "Request Headers Parser"
+else if selector == "shurl"
+  - title = "URL Shortener"
+else if selector == "imgsearch"
+  - title = "Image Search Abstraction Layer"
+else if selector == "fileanalyse"
+  - title = "File Analyser"
+else if !selector
+  - title = "API Challenges - Express"
+else
+  - title = "Not Found"
+
+doctype html
+html
+  head
+    title #{title}
+    link(href='favicon.ico' rel='shortcut icon' type='image/x-icon')
+    link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css')
+    link(href='style.css' rel='stylesheet' type='text/css')
+  body
+    if selector == "timestamp"
+      include ./parts/timestamp
+    else if selector == "whoami"
+      include ./parts/whoami
+    else if selector == "shurl"
+      include ./parts/shurl
+    else if selector == "imgsearch"
+      include ./parts/imgsearch
+    else if selector == "fileanalyse"
+      include ./parts/fileanalyse
+    else if !selector
+      include ./parts/ipage
+    else
+      include ./parts/not_found
+
+    .footer
+      p
+        |by <a href="http://www.emant.altervista.org">em-ant</a> | <a href="https://github.com/Em-Ant">github</a> |
+        |<a href="http://codepen.io/Em-Ant/">codepen</a> | <a href="http://www.freecodecamp.com/em-ant">freeCodeCamp</a>
+        if selector
+          | &nbsp;| <a href="/">&lt;&lt;index</a>
