@@ -1,7 +1,7 @@
 var router = require('express').Router();
 
 var multer = require('multer');
-// here on HyperDev the fs is read only, 
+// here on HyperDev the fs is read only,
 // You have to upload the file to memory
 var storage = multer.memoryStorage();
 var upload = multer({ storage: storage });
@@ -26,4 +26,7 @@ router.get("/imgsearch/:what", searchImages);
 
 router.post('/fileanalyse',upload.single('upfile'),fileanalyse);
 
+router.use(function(req, res, next){
+  res.status(404).json({error: 'Not Found'});
+})
 module.exports = router;
