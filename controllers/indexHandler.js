@@ -1,6 +1,6 @@
 module.exports = function(req, res) {
 
-  var view = req.params.selector;
+  var view = req.params[0];
   var title;
 
   switch(view) {
